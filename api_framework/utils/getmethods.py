@@ -1,4 +1,4 @@
-from .method import ServiceMethod
+from ..service.method import ServiceMethod
 
 def ServiceGetMethods(class_instance):
     if class_instance.__class__ == type:
