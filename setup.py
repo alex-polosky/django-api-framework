@@ -55,7 +55,10 @@ setup(
     author_email='alexpolosky@gmail.com',
     packages=get_packages(name),
     package_data=get_package_data(name),
-    install_requires=[],
+    install_requires=[
+        # 'Django>=1.11,<2.0',
+        # 'djangorestframework>=3.6,<3.7'
+    ],
     zip_safe=False,
     classifiers=[
         'Development Status :: 4 - Beta',
