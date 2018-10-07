@@ -23,7 +23,7 @@ def ServiceGetMethods(class_instance):
             methodDefinition = getattr(var, _ServiceMethod.PARAM, None)
             serviceMethod = var
         except TypeError as ex:
-            methodDefinition = getattr(varName[1], ServiceMethod.PARAM, None)
+            methodDefinition = getattr(varName[1], _ServiceMethod.PARAM, None)
             serviceMethod = varName
 
         if methodDefinition:
@@ -32,7 +32,7 @@ def ServiceGetMethods(class_instance):
             
             methods[methodDefinition.name] = methodDefinition.clone()
             methods[methodDefinition.name]._serviceMethod = serviceMethod
-            setattr(methods[methodDefinition.name], ServiceMethod.PARAM, methodDefinition)
+            setattr(methods[methodDefinition.name], _ServiceMethod.PARAM, methodDefinition)
     
     return list(methods.values())
 
