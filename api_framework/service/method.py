@@ -6,6 +6,7 @@ from .. import authentication
 from .. import decorators
 from .. import permissions
 from .. import renderers
+from ..definitions import MethodDefinition
 from ..exceptions import ServiceException
 from ..serializers import BaseSerializer
 from ..utils import NamedDict

@@ -31,6 +31,8 @@ class Settings(object):
             return self.defaults[attr]
 
     def load_class(self, clsString):
-        return importlib.import_module(clsString)
+        parts = clsString.split('.')
+        module = importlib.import_module('.'.join(parts[:-1]))
+        return getattr(module, parts[-1])
 
 api_settings = Settings()
